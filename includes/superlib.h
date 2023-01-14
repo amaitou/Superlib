@@ -6,7 +6,7 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:12:45 by amait-ou          #+#    #+#             */
-/*   Updated: 2023/01/14 10:03:58 by amait-ou         ###   ########.fr       */
+/*   Updated: 2023/01/14 10:58:47 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@
 # endif
 
 /* Shortcuts */
-typedef unsigned char	t_uc;
-typedef unsigned int	t_ui;
+typedef unsigned char		t_uc;
+typedef unsigned int		t_ui;
 typedef unsigned long		t_ul;
 typedef struct s_list
 {
@@ -100,11 +100,11 @@ char	*get_one_line(char *stash);
 char	*free_stash(char *reserve);
 
 /* Ft_printf */
-int	ft_printf(const char *s, ...);
-int	ft_putchar(char c);
-int	ft_putstr(char *s);
-int	ft_printhex(t_ul address, char *s);
-int	ft_putsigned(int nb);
-int	ft_putunsigned(t_ui nb);
+int		ft_printf(const char *s, ...);
+int		ft_putchar(char c);
+int		ft_putstr(char *s);
+int		ft_printhex(t_ul address, char *s);
+int		ft_putsigned(int nb);
+int		ft_putunsigned(t_ui nb);
 
 #endif
