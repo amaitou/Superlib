@@ -63,7 +63,7 @@ OBJ = $(SRC:sources/%.c=objects/%.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@echo "\033[0;32m[+] archiving *.o into superlib.a\033[0m"
+	@echo "\033[0;32m[+] archiving *.o onto superlib.a\033[0m"
 	@$(AR) rcs $@ $?
 
 objects/%.o : sources/%.c $(header)
