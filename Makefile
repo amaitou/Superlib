@@ -1,8 +1,17 @@
 
 NAME = superlib.a
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -I includes
-HEADER = ./includes/superlib.h
+CFLAGS = -Wall -Wextra -Werror -I ./includes
+MKDIR_P = mkdir -p
+DIRS = 	objects/validators \
+		objects/strings/ \
+		objects/memory \
+		objects/file_descriptors \
+		objects/validators \
+		objects/linked_lists \
+		objects/get_next_line \
+		objects/ft_printf
+
 SRC = sources/validators/ft_isalpha.c \
 		sources/validators/ft_isdigit.c \
 		sources/validators/ft_isalnum.c \
@@ -57,21 +66,18 @@ SRC = sources/validators/ft_isalpha.c \
 		sources/ft_printf/ft_putunsigned.c
 
 OBJ = $(SRC:sources/%.c=objects/%.o)
-MKDIR_P = mkdir -p
 
-# OBJECT_FILES = $(SOURCES:sources%.c=objects%.o)
+all: _mkdir $(NAME)
 
-all: MAKE_DIR $(NAME)
-
-MAKE_DIR:
-	@mkdir -p objects
-	@mkdir -p objects/validators objects/strings/ objects/memory objects/file_descriptors objects/validators objects/linked_lists objects/get_next_line objects/ft_printf
+_mkdir:
+	@$(MKDIR_P) objects
+	@$(MKDIR_P)  $(DIRS)
 
 $(NAME): $(OBJ)
 	@echo "\033[0;32m[+] archiving *.o onto superlib.a\033[0m"
 	@$(AR) rcs $@ $?
 
-objects/%.o : sources/%.c $(header)
+objects/%.o : sources/%.c
 	@echo "\033[0;33m[*] compiling $?\033[0m"
 	@$(CC) $(CFLAGS) -c $< -o $@
 
@@ -84,4 +90,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re _mkdir
