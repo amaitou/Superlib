@@ -57,10 +57,15 @@ SRC = sources/validators/ft_isalpha.c \
 		sources/ft_printf/ft_putunsigned.c
 
 OBJ = $(SRC:sources/%.c=objects/%.o)
+MKDIR_P = mkdir -p
 
 # OBJECT_FILES = $(SOURCES:sources%.c=objects%.o)
 
-all: $(NAME)
+all: MAKE_DIR $(NAME)
+
+MAKE_DIR:
+	@mkdir -p objects
+	@mkdir -p objects/validators objects/strings/ objects/memory objects/file_descriptors objects/validators objects/linked_lists objects/get_next_line objects/ft_printf
 
 $(NAME): $(OBJ)
 	@echo "\033[0;32m[+] archiving *.o onto superlib.a\033[0m"
