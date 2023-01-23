@@ -1,93 +1,82 @@
 
 NAME = superlib.a
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -I ./includes
-MKDIR_P = mkdir -p
-DIRS = 	objects/validators \
-		objects/strings/ \
-		objects/memory \
-		objects/file_descriptors \
-		objects/validators \
-		objects/linked_lists \
-		objects/get_next_line \
-		objects/ft_printf
+CFLAGS = -Wall -Wextra -Werror
+AR = ar
 
-SRC = sources/validators/ft_isalpha.c \
-		sources/validators/ft_isdigit.c \
-		sources/validators/ft_isalnum.c \
-		sources/validators/ft_isascii.c \
-		sources/validators/ft_isprint.c \
-		sources/memory/ft_memset.c \
-		sources/memory/ft_bzero.c \
-		sources/memory/ft_memcpy.c \
-		sources/memory/ft_memmove.c \
-		sources/memory/ft_memchr.c \
-		sources/memory/ft_memcmp.c \
-		sources/memory/ft_calloc.c \
-		sources/strings/ft_strlen.c \
-		sources/strings/ft_strlcpy.c \
-		sources/strings/ft_strlcat.c \
-		sources/strings/ft_toupper.c \
-		sources/strings/ft_tolower.c \
-		sources/strings/ft_strchr.c \
-		sources/strings/ft_strrchr.c \
-		sources/strings/ft_strncmp.c \
-		sources/strings/ft_strnstr.c \
-		sources/strings/ft_atoi.c \
-		sources/strings/ft_strdup.c \
-		sources/strings/ft_substr.c \
-		sources/strings/ft_strjoin.c \
-		sources/strings/ft_strtrim.c \
-		sources/strings/ft_split.c \
-		sources/strings/ft_itoa.c \
-		sources/strings/ft_strmapi.c \
-		sources/strings/ft_striteri.c \
-		sources/file_descriptors/ft_putchar_fd.c \
-		sources/file_descriptors/ft_putstr_fd.c \
-		sources/file_descriptors/ft_putendl_fd.c \
-		sources/file_descriptors/ft_putnbr_fd.c \
-		sources/linked_lists/ft_lstnew.c \
-		sources/linked_lists/ft_lstadd_front.c \
-		sources/linked_lists/ft_lstadd_back.c \
-		sources/linked_lists/ft_lstmap.c \
-		sources/linked_lists/ft_lstiter.c \
-		sources/linked_lists/ft_lstsize.c \
-		sources/linked_lists/ft_lstlast.c \
-		sources/linked_lists/ft_lstclear.c \
-		sources/linked_lists/ft_lstdelone.c \
-		sources/linked_lists/ft_lstsize.c \
-		sources/get_next_line/get_next_line.c \
-		sources/get_next_line/get_next_line_utils.c \
-		sources/ft_printf/ft_printf.c \
-		sources/ft_printf/ft_printhex.c \
-		sources/ft_printf/ft_putchar.c \
-		sources/ft_printf/ft_putsigned.c \
-		sources/ft_printf/ft_putstr.c \
-		sources/ft_printf/ft_putunsigned.c
+CFILES = ft_isalpha.c \
+		ft_isdigit.c \
+		ft_isalnum.c \
+		ft_isascii.c \
+		ft_isprint.c \
+		ft_memset.c \
+		ft_bzero.c \
+		ft_memcpy.c \
+		ft_memmove.c \
+		ft_memchr.c \
+		ft_memcmp.c \
+		ft_calloc.c \
+		ft_strlen.c \
+		ft_strlcpy.c \
+		ft_strlcat.c \
+		ft_toupper.c \
+		ft_tolower.c \
+		ft_strchr.c \
+		ft_strrchr.c \
+		ft_strncmp.c \
+		ft_strnstr.c \
+		ft_atoi.c \
+		ft_strdup.c \
+		ft_substr.c \
+		ft_strjoin.c \
+		ft_strtrim.c \
+		ft_split.c \
+		ft_itoa.c \
+		ft_strmapi.c \
+		ft_striteri.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c \
+		ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstadd_back.c \
+		ft_lstmap.c \
+		ft_lstiter.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstclear.c \
+		ft_lstdelone.c \
+		ft_lstsize.c \
+		get_next_line.c \
+		get_next_line_utils.c \
+		ft_printf.c \
+		ft_printhex.c \
+		ft_putchar.c \
+		ft_putsigned.c \
+		ft_putstr.c \
+		ft_putunsigned.c
 
-OBJ = $(SRC:sources/%.c=objects/%.o)
+SOURCES = $(CFILES:.c=.o)
 
-all: _mkdir $(NAME)
+%.o: %.c
+	@echo "\033[0;33m[*] compiling $?\033[0m"
+	@$(CC) $(CFLAGS) -c $?
 
-_mkdir:
-	@$(MKDIR_P) objects
-	@$(MKDIR_P)  $(DIRS)
+all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(SOURCES)
 	@echo "\033[0;32m[+] archiving *.o onto superlib.a\033[0m"
 	@$(AR) rcs $@ $?
 
-objects/%.o : sources/%.c
-	@echo "\033[0;33m[*] compiling $?\033[0m"
-	@$(CC) $(CFLAGS) -c $< -o $@
-
 clean:
 	@echo "\033[1;31m[!] deleting *.o\033[0m"
-	@rm -f $(OBJ)
+	@rm -f $(SOURCES)
+
 fclean: clean
 	@echo "\033[1;31m[!] deleting superlib.a and *.o\033[0m"
 	@rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re _mkdir
+.PHONY: all clean fclean re bonus
