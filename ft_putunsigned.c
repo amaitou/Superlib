@@ -29,7 +29,7 @@ static int	helper(t_ui nb)
 
 int	ft_putunsigned(t_ui nb)
 {
-	if (nb >= 0 && nb <= 9)
+	if (nb > 0 && nb <= 9)
 		ft_putchar(nb + 48);
 	else
 	{
