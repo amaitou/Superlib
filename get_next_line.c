@@ -39,7 +39,7 @@ char	*get_stash(int fd, char *stash)
 char	*get_next_line(int fd)
 {
 	char		*line;
-	static char	*stash[INT_MAX];
+	static char	*stash[8192];
 
 	if (fd < 0 || fd == 1 || fd == 2 || BUFFER_SIZE <= 0)
 		return (NULL);
