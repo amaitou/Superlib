@@ -57,7 +57,10 @@ CFILES = ft_isalpha.c \
 		ft_putstr.c \
 		ft_putunsigned.c \
 		ft_charlen.c \
-		ft_strcmp.c
+		ft_strcmp.c \
+		__cvector_utils_.c \
+		__cvector_utils__.c \
+		__cvector_utils___.c
 
 SOURCES = $(CFILES:.c=.o)
 

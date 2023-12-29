@@ -6,7 +6,7 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:12:45 by amait-ou          #+#    #+#             */
-/*   Updated: 2023/01/24 00:18:46 by amait-ou         ###   ########.fr       */
+/*   Updated: 2023/12/29 18:19:54 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@
 # include <stdint.h>
 # include <limits.h>
 # include <stdarg.h>
+# include <stdio.h>
 
 /* Macros  */
 # ifndef BUFFER_SIZE
@@ -45,6 +46,14 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+/* __Cvector_ */
+typedef struct s_vector
+{
+	size_t	size;
+	size_t	capacity;
+	void	**vector;
+}	t_vector;
+
 /* Libft */
 
 int		ft_isalpha(int c);
@@ -109,4 +118,19 @@ int		ft_printhex(t_ul address, char *s);
 int		ft_putsigned(int nb);
 int		ft_putunsigned(t_ui nb);
 
+/* __Cvector */
+void		**__begin_v(t_vector *vector);
+void		**__end_v(t_vector *vector);
+t_vector	*__create_v(void);
+t_vector	*__allocate_v(size_t size_t);
+void		*__get_v(t_vector *vector, size_t index);
+void		*__front_v(t_vector *vector);
+void		*__back_v(t_vector *vector);
+void		__free_v(t_vector *vector);
+int			__empty_v(t_vector *vector);
+int			__push_v(t_vector **vector, void *value, size_t size);
+int			__pop_v(t_vector *vector);
+int			__clear_v(t_vector *vector);
+size_t		__size_v(t_vector *vector);
+size_t		__capacity_v(t_vector *vector);
 #endif
