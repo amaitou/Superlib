@@ -6,7 +6,7 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:12:45 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/01/30 06:16:44 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/01/31 00:02:11 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@
 # include <limits.h>
 # include <stdarg.h>
 # include <stdio.h>
+# include <string.h>
 
 /* Macros  */
 # ifndef BUFFER_SIZE
