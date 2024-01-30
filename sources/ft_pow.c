@@ -14,9 +14,6 @@
 
 size_t	ft_pow(int nb, int power)
 {
-	int	r;
-
-	r = 1;
 	if (power < 0)
 		return (0);
 	else if (power < 1)
