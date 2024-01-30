@@ -65,3 +65,5 @@ int main(void)
 	*/
 }
 ```
+
+> Please don't hesitate to report any issues as well as feel free to contribute in any way to this project. Your involvement is greatly appreciated!
