@@ -60,7 +60,8 @@ CFILES = ./sources/ft_isalpha.c \
 		./sources/ft_strcmp.c \
 		./sources/__cvector_utils_.c \
 		./sources/__cvector_utils__.c \
-		./sources/__cvector_utils___.c
+		./sources/__cvector_utils___.c \
+		./sources/ft_swap.c
 
 INCLUDE_DIR = ./includes
 SOURCE_DIR = ./sources

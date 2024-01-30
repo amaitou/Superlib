@@ -6,7 +6,7 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:12:45 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/01/30 03:25:55 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/01/30 06:06:30 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ typedef struct s_vector
 }	t_vector;
 
 /* Libft */
-
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
 int			ft_isalnum(int c);
@@ -133,4 +132,8 @@ int			__pop_v(t_vector *vector);
 int			__clear_v(t_vector *vector);
 size_t		__size_v(t_vector *vector);
 size_t		__capacity_v(t_vector *vector);
+
+/* Additional Functions */
+void		ft_swap(void **a, void **b);
+
 #endif
