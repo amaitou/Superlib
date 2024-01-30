@@ -61,7 +61,10 @@ CFILES = ./sources/ft_isalpha.c \
 		./sources/__cvector_utils_.c \
 		./sources/__cvector_utils__.c \
 		./sources/__cvector_utils___.c \
-		./sources/ft_swap.c
+		./sources/ft_swap.c \
+		./sources/ft_pow.c \
+		./sources/ft_isprime.c \
+		./sources/ft_sqrt.c
 
 INCLUDE_DIR = ./includes
 SOURCE_DIR = ./sources

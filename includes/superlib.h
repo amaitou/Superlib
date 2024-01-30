@@ -6,7 +6,7 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:12:45 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/01/30 06:06:30 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/01/30 06:16:44 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,5 +135,8 @@ size_t		__capacity_v(t_vector *vector);
 
 /* Additional Functions */
 void		ft_swap(void **a, void **b);
+size_t		ft_pow(int nb, int power);
+size_t		ft_isprime(int nb);
+size_t		ft_sqrt(int nb);
 
 #endif
