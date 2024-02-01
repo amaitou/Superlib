@@ -6,7 +6,7 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:12:45 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/02/01 06:49:25 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/02/01 07:29:55 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,7 +122,9 @@ t_dlist		*ft_d_last(t_dlist *lst);
 size_t		ft_d_lstsize(t_dlist *lst);
 void		ft_d_addback(t_dlist **lst, t_dlist *new);
 void		ft_d_addfront(t_dlist **lst, t_dlist *new);
-void		ft_d_clear(t_dlist **lst);
+void		ft_d_clear(t_dlist **lst, void (*del)(void *));
+void		ft_d_delone(t_dlist *lst, void (*del)(void *));
+void		ft_d_iter(t_dlist *lst, void (*f)(void *));
 
 /* Get next line */
 char		*get_next_line(int fd);
