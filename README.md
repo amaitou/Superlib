@@ -28,6 +28,8 @@ gcc <name>.c superlib.a
 ```sh
 |____includes
 | |____superlib.h
+|____Makefile
+|____README.md
 |____sources
 | |____checkers
 | | |____ft_isalnum.c
@@ -36,6 +38,15 @@ gcc <name>.c superlib.a
 | | |____ft_isdigit.c
 | | |____ft_isprime.c
 | | |____ft_isprint.c
+| |____doubly_linkedlist
+| | |____ft_lstdadd_back.c
+| | |____ft_lstdadd_front.c
+| | |____ft_lstdclear.c
+| | |____ft_lstddelone.c
+| | |____ft_lstditer.c
+| | |____ft_lstdlast.c
+| | |____ft_lstdnew.c
+| | |____ft_lstdsize.c
 | |____file_io
 | | |____ft_putchar_fd.c
 | | |____ft_putendl_fd.c
@@ -109,8 +120,6 @@ gcc <name>.c superlib.a
 | | |____pop_v.c
 | | |____push_v.c
 | | |____size_v.c
-|____README.md
-|____Makefile
 |____.gitignore
 ```
 
