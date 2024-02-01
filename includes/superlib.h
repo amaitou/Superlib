@@ -159,9 +159,11 @@ size_t		__size_v(t_vector *vector);
 size_t		__capacity_v(t_vector *vector);
 
 /* Math Functions */
-void		ft_swap(void **a, void **b);
 size_t		ft_pow(int nb, int power);
 size_t		ft_isprime(int nb);
 size_t		ft_sqrt(int nb);
+
+/* Other Functions */
+void		ft_swap(void **a, void **b);
 
 #endif
