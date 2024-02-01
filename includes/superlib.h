@@ -6,7 +6,7 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:12:45 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/01/31 00:02:11 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/02/01 06:49:25 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
   be read by any external files as well as they were made to help have my code
   done.
 
-  Note: I hate using the keyword NULL so you might see (void *)0 alot in my codes
+  Note: I hate using the keyword NULL so you might see \
+  	(void *)0 or (void *)0x00 a lot in my codes
 
  */
 
@@ -42,12 +43,23 @@
 typedef unsigned char		t_uc;
 typedef unsigned int		t_ui;
 typedef unsigned long		t_ul;
+
+/* Singly Linked List Structure */
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
-/* __Cvector_ */
+
+/* Doubly Linked List Structure */
+typedef struct s_dlist
+{
+	void			*content;
+	struct s_dlist	*next;
+	struct s_dlist	*prev;
+}	t_dlist;
+
+/* __Cvector_ Structure */
 typedef struct s_vector
 {
 	size_t	size;
@@ -90,6 +102,10 @@ void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 char		*ft_strtrim(char const *s1, char const *set);
 char		*ft_itoa(int n);
+int			ft_charlen(char *s, int c);
+int			ft_strcmp(char *s1, char *s2);
+
+/* Singly Linked List */
 t_list		*ft_lstnew(void *content);
 void		ft_lstadd_front(t_list **lst, t_list *new);
 int			ft_lstsize(t_list *lst);
@@ -99,8 +115,14 @@ void		ft_lstdelone(t_list *lst, void (*del)(void *));
 void		ft_lstclear(t_list **lst, void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-int			ft_charlen(char *s, int c);
-int			ft_strcmp(char *s1, char *s2);
+
+/* Doubly Linked List */
+t_dlist		*ft_d_lstnew(void *content);
+t_dlist		*ft_d_last(t_dlist *lst);
+size_t		ft_d_lstsize(t_dlist *lst);
+void		ft_d_addback(t_dlist **lst, t_dlist *new);
+void		ft_d_addfront(t_dlist **lst, t_dlist *new);
+void		ft_d_clear(t_dlist **lst);
 
 /* Get next line */
 char		*get_next_line(int fd);
@@ -134,7 +156,7 @@ int			__clear_v(t_vector *vector);
 size_t		__size_v(t_vector *vector);
 size_t		__capacity_v(t_vector *vector);
 
-/* Additional Functions */
+/* Math Functions */
 void		ft_swap(void **a, void **b);
 size_t		ft_pow(int nb, int power);
 size_t		ft_isprime(int nb);
