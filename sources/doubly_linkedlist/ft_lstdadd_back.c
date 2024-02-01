@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_d_addback.c                                     :+:      :+:    :+:   */
+/*   ft_lstdadd_back.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 06:05:36 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/02/01 06:46:48 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/02/01 07:40:47 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-void	ft_d_addback(t_dlist **lst, t_dlist *new)
+void	ft_lstdadd_back(t_dlist **lst, t_dlist *new)
 {
 	t_dlist	*last;
 
-	last = ft_d_last(*lst);
+	last = ft_lstdlast(*lst);
 	if (last)
 	{
 		last->next = new;

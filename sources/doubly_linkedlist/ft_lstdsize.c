@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_d_iter.c                                        :+:      :+:    :+:   */
+/*   ft_lstdsize.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/01 07:17:49 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/02/01 07:18:02 by amait-ou         ###   ########.fr       */
+/*   Created: 2024/02/01 06:05:22 by amait-ou          #+#    #+#             */
+/*   Updated: 2024/02/01 07:39:38 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-void	ft_d_iter(t_dlist *lst, void (*f)(void *))
+size_t	ft_lstdsize(t_dlist *lst)
 {
-	if (!f)
-		return ;
-	if (lst)
+	size_t		i;
+	t_dlist		*tmp;
+
+	i = 0;
+	tmp = lst;
+	while (tmp)
 	{
-		while (lst != NULL)
-		{
-			f(lst->content);
-			lst = lst->next;
-		}
+		i++;
+		tmp = tmp->next;
 	}
+	return (i);
 }

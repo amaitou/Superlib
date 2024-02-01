@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_d_clear.c                                       :+:      :+:    :+:   */
+/*   ft_lstditer.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/01 06:26:59 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/02/01 07:27:31 by amait-ou         ###   ########.fr       */
+/*   Created: 2024/02/01 07:17:49 by amait-ou          #+#    #+#             */
+/*   Updated: 2024/02/01 07:38:39 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-void	ft_d_clear(t_dlist **lst, void (*del)(void *))
+void	ft_lstditer(t_dlist *lst, void (*f)(void *))
 {
-	t_dlist	*temp;
-
-	if (!lst || !del)
+	if (!f)
 		return ;
-	while ((*lst))
+	if (lst)
 	{
-		temp = *lst;
-		del((*lst)->content);
-		*lst = (*lst)->next;
-		free(temp);
+		while (lst != NULL)
+		{
+			f(lst->content);
+			lst = lst->next;
+		}
 	}
-	*lst = (void *)0x00;
 }
