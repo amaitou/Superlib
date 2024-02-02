@@ -6,16 +6,16 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 09:55:03 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/01/30 03:23:25 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/02/02 10:35:56 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-char	*get_stash(int fd, char *stash)
+char	*get_stash(int32_t fd, char *stash)
 {
 	char	*buffer;
-	int		rd;
+	int32_t	rd;
 
 	rd = 1;
 	buffer = malloc(BUFFER_SIZE + 1);
@@ -36,7 +36,7 @@ char	*get_stash(int fd, char *stash)
 	return (stash);
 }
 
-char	*get_next_line(int fd)
+char	*get_next_line(int32_t fd)
 {
 	char		*line;
 	static char	*stash[8192];

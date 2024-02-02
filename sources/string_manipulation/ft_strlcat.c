@@ -14,10 +14,10 @@
 
 /*
 
-  	the only three conditions you have to take care of are :
+	the only three conditions you have to take care of are :
 		- both of dst and dstsize are NULL = return NULL
- 		- dstsize <= dst = src + dstsize
-	   	- dstsize > dst  = src + dst (copying)
+		- dstsize <= dst = src + dstsize
+		- dstsize > dst  = src + dst (copying)
  */
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)

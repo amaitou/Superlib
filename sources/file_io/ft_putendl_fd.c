@@ -6,13 +6,13 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:50:41 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/01/30 03:21:32 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/02/02 11:05:08 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int32_t fd)
 {
 	char	c;
 

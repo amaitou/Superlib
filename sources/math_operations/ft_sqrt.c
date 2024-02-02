@@ -6,16 +6,16 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 06:16:04 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/01/30 06:16:29 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/02/02 10:37:10 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-size_t	ft_sqrt(int nb)
+size_t	ft_sqrt(int32_t nb)
 {
-	int	i;
-	int	res;
+	int32_t	i;
+	int32_t	res;
 
 	res = 0;
 	i = 0;

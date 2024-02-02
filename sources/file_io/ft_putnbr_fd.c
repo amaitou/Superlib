@@ -6,20 +6,20 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:01:58 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/01/30 03:21:36 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/02/02 11:05:15 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int32_t n, int32_t fd)
 {
 	char	a;
 	char	b;
 
 	if (n >= 0 && n <= 9)
 	{
-		a = n + 48 ;
+		a = n + 48;
 		write(fd, &a, 1);
 	}
 	else if (n == -2147483648)

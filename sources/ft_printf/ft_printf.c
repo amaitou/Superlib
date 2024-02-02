@@ -6,19 +6,19 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 10:11:52 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/01/30 03:21:10 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/02/02 11:09:36 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-static int	helper(const char *s, va_list args)
+static int32_t	helper(const char *s, va_list args)
 {
-	int	i;
+	int32_t	i;
 
 	i = 0;
 	if (*s == 'c')
-		i = ft_putchar(va_arg(args, int));
+		i = ft_putchar(va_arg(args, int32_t));
 	else if (*s == 's')
 		i = ft_putstr(va_arg(args, char *));
 	else if (*s == '%')
@@ -28,7 +28,7 @@ static int	helper(const char *s, va_list args)
 	else if (*s == 'X')
 		i = ft_printhex(va_arg(args, t_ui), "0123456789ABCDEF");
 	else if (*s == 'd' || *s == 'i')
-		i = ft_putsigned(va_arg(args, int));
+		i = ft_putsigned(va_arg(args, int32_t));
 	else if (*s == 'u')
 		i = ft_putunsigned(va_arg(args, t_ui));
 	else if (*s == 'p')
@@ -39,10 +39,10 @@ static int	helper(const char *s, va_list args)
 	return (i);
 }
 
-int	ft_printf(const char *s, ...)
+int32_t	ft_printf(const char *s, ...)
 {
 	va_list	args;
-	int		l;
+	int32_t	l;
 
 	va_start(args, s);
 	l = 0;

@@ -6,7 +6,7 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 22:24:19 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/01/30 03:22:17 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/02/02 10:42:01 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
-	int		j;
+	int32_t	i;
+	int32_t	j;
 	char	*p;
 
 	if (!s1 || !s2)

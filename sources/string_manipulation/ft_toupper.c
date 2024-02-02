@@ -6,13 +6,13 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 22:59:03 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/01/30 03:23:14 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/02/02 11:08:32 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-int	ft_toupper(int c)
+int32_t	ft_toupper(int32_t c)
 {
 	if (c >= 'a' && c <= 'z')
 		c -= 32;

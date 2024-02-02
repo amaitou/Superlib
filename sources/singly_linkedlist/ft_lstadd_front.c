@@ -12,7 +12,7 @@
 
 /*
 
-	it is so simple to add a node at the beginning of a linked list. 
+	it is so simple to add a node at the beginning of a linked list.
 	since we have the "head" it is like adding the node in the back of
 	the "head"
 	as the next of the node will be "head" and the head will be the node

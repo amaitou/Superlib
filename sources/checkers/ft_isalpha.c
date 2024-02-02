@@ -6,13 +6,13 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:01:42 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/01/30 03:19:16 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/02/02 11:04:16 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-int	ft_isalpha(int c)
+int32_t	ft_isalpha(int32_t c)
 {
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }

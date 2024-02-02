@@ -14,8 +14,8 @@
 
 size_t	ft_lstdsize(t_dlist *lst)
 {
-	size_t		i;
-	t_dlist		*tmp;
+	size_t	i;
+	t_dlist	*tmp;
 
 	i = 0;
 	tmp = lst;

@@ -6,13 +6,13 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 16:37:16 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/01/30 03:22:44 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/02/02 11:07:57 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(u_int32_t, char))
 {
 	size_t	i;
 	t_ui	j;

@@ -6,15 +6,15 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 20:42:35 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/01/30 03:19:45 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/02/02 11:11:15 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
- 
- 	"ft_itoa" is the opposite of "ft_atoi" because "ft_itoa" converts the number
+
+	"ft_itoa" is the opposite of "ft_atoi" because "ft_itoa" converts the number
 	from integer to string.
-	
+
 	first of all let's count how many digits within "nb", that's what
 	the function "len_num(long int nb)" does as it checks if "nb"
 	is negative to consider the sign '-' or "0" as a characters otherwise
@@ -25,9 +25,9 @@
 		simply because "int overflow" must be handled in case the parameter "n"
 		is equal or greater than "-2147483647" because "int" is (32-bit) and "long"
 		is (64-bit)
-	
+
 	ft_itoa creates a variable "nb" to allocate "n" in an enough memory
-	then allocates the proper size based on the result that comes from 
+	then allocates the proper size based on the result that comes from
 	"len_num(int n)" and if the allocations fails "NULL" will be returned.
 
 	the function returns a string so putting "NULL Character" is necessary to
@@ -37,18 +37,18 @@
 	in case "n" == 0 only one memory will be allocated and will hold 0.
 
 	if nb < 0 I put '-' at the beginning of the string because '-' has been
-	counted as a character in "len_num(long int nb)" then I convert the "nb" to 
-	positive integer to perform the operation of converting each digit into 
+	counted as a character in "len_num(long int nb)" then I convert the "nb" to
+	positive integer to perform the operation of converting each digit into
 	character starting from the end of "n".
 
- 
+
  */
 
 #include "../../includes/superlib.h"
 
-static int	len_num(long int nb)
+static int32_t	len_num(int64_t nb)
 {
-	int	i;
+	int32_t	i;
 
 	i = 0;
 	if (nb <= 0)
@@ -64,11 +64,11 @@ static int	len_num(long int nb)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+char	*ft_itoa(int32_t n)
 {
-	long int	nb;
-	char		*p;
-	int			i;
+	int64_t	nb;
+	char	*p;
+	int32_t	i;
 
 	nb = n;
 	i = len_num(nb);

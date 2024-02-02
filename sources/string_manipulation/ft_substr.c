@@ -6,14 +6,14 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 20:34:51 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/01/30 03:23:04 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/02/02 11:18:09 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 
 	"ft_substr" finds a string starting from the param "start"
-	and allocates the found string according to "len" + 1 for the 
+	and allocates the found string according to "len" + 1 for the
 	"\0".
 
 	firstly the function checks is the given pointer "s" is "NULL" to stop
@@ -28,7 +28,7 @@
 		len >= ft_strlen(s):
 			this case is more related to memory wasting.
 			let's suppose that you have string contained from 16 characters,
-			len is 30 and start is 6 
+			len is 30 and start is 6
 			since you have to allocate only 10 characters why would you allocate
 			30 characters and most of them would be unsused. that's why I've used
 			"ft_strdup".
@@ -41,9 +41,9 @@
 
 #include "../../includes/superlib.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, t_ui start, size_t len)
 {
-	char		*p;
+	char	*p;
 
 	if (!s)
 		return ((void *)0);

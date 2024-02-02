@@ -6,13 +6,13 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:23:51 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/01/30 03:22:13 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/02/02 11:12:34 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(u_int32_t, char *))
 {
 	t_ui	i;
 

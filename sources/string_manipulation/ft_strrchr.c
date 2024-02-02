@@ -6,13 +6,13 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 00:37:53 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/01/30 03:22:56 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/02/02 11:08:08 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int32_t c)
 {
 	char	*p;
 	size_t	i;

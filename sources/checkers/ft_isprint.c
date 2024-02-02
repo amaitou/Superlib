@@ -6,13 +6,13 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:27:28 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/01/30 03:19:30 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/02/02 11:04:42 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-int	ft_isprint(int c)
+int32_t	ft_isprint(int32_t c)
 {
 	return (c >= 32 && c <= 126);
 }

@@ -6,13 +6,13 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 23:07:18 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/01/30 03:23:09 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/02/02 11:08:26 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-int	ft_tolower(int c)
+int32_t	ft_tolower(int32_t c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c += 32;
