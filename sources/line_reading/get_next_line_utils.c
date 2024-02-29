@@ -6,7 +6,7 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 09:55:31 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/02/02 10:36:53 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/01/30 03:23:21 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	string_len(char *s)
 	return (i);
 }
 
-char	*char_search(char *s, int32_t c)
+char	*char_search(char *s, int c)
 {
 	char	*p;
 
@@ -40,8 +40,8 @@ char	*char_search(char *s, int32_t c)
 
 char	*string_join(char *s1, char *s2)
 {
-	int32_t	i;
-	int32_t	j;
+	int		i;
+	int		j;
 	char	*p;
 
 	p = (char *)malloc(string_len(s1) + string_len(s2) + 1);
@@ -64,7 +64,7 @@ char	*string_join(char *s1, char *s2)
 char	*get_one_line(char *stash)
 {
 	char	*line;
-	int32_t	i;
+	int		i;
 
 	if (!stash)
 		return (NULL);
@@ -89,8 +89,8 @@ char	*get_one_line(char *stash)
 char	*free_stash(char *reserve)
 {
 	char	*stash;
-	int32_t	i;
-	int32_t	j;
+	int		i;
+	int		j;
 
 	if (!reserve)
 		return (NULL);

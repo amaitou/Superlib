@@ -6,7 +6,7 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 23:14:20 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/02/02 10:41:33 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/01/30 03:21:57 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,13 @@
 	a particular character.
 
 	The first function I use is "words(const char *s, char c)" which counts
-	how many words within a "*s". its main idea is looping over the string
-	and start positioning the pointer step ahead as long as the pointer is equal
-	to the character, once a character doesn't equal the pointer,
-		then this is the
-	first element of the word. and we know the the end of a word when we make
-	the pointer to step ahead to equal the character. once this condition is true,
+	how many words within a "*s". its main idea is looping over the string 
+	and start positioning the pointer step ahead as long as the pointer is equal 
+	to the character, once a character doesn't equal the pointer, then this is the 
+	first element of the word. and we know the the end of a word when we make 
+	the pointer to step ahead to equal the character. once this condition is true, 
 	a variable counter will be incremnted by one.
-
+	
 	The second function I use is "letters(const char *s, int position, char c)"
 	generally ,it counts how many letters are contained within a word according to
 	the position of the word as it starts moving the pointer straight ahead and
@@ -34,9 +33,8 @@
 	in a double pointer that refers to a 2d arrays whee we store our data.
 
 
-	finally, our hero function which is right here "ft_split(const char *s),
-		int c"
-	that allocates a double pointer to help us store our splitted strings using the
+	finally, our hero function which is right here "ft_split(const char *s), int c"
+	that allocates a double pointer to help us store our splitted strings using the 
 	"words" function that counts the number of words.
 
 	note: if the allocation fails in any piece of code. "NULL" will be returned.
@@ -44,9 +42,9 @@
 
 #include "../../includes/superlib.h"
 
-static int32_t	words(const char *s, char c)
+static int	words(const char *s, char c)
 {
-	int32_t	i;
+	int		i;
 	char	*p;
 
 	i = 0;
@@ -65,9 +63,9 @@ static int32_t	words(const char *s, char c)
 	return (i);
 }
 
-static int32_t	letters(const char *s, int32_t position, char c)
+static int	letters(const char *s, int position, char c)
 {
-	int32_t	i;
+	int		i;
 	char	*p;
 
 	p = (char *)s;
@@ -80,10 +78,10 @@ static int32_t	letters(const char *s, int32_t position, char c)
 	return (i);
 }
 
-static char	**allocation(char **p, char const *s, int32_t i, char c)
+static char	**allocation(char **p, char const *s, int i, char c)
 {
-	int32_t	k;
-	int32_t	j;
+	int	k;
+	int	j;
 
 	j = 0;
 	while (s[i])
@@ -111,7 +109,7 @@ static char	**allocation(char **p, char const *s, int32_t i, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**p;
-	int32_t	i;
+	int		i;
 
 	i = 0;
 	if (!s)

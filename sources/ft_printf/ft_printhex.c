@@ -6,15 +6,15 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:58:16 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/02/02 10:34:35 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/01/30 03:21:14 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-static int32_t	ft_numlen_int(t_ul nb)
+static int	ft_numlen_int(t_ul nb)
 {
-	int32_t	i;
+	int	i;
 
 	i = 0;
 	if (nb == 0)
@@ -27,7 +27,7 @@ static int32_t	ft_numlen_int(t_ul nb)
 	return (i);
 }
 
-int32_t	ft_printhex(t_ul address, char *s)
+int	ft_printhex(t_ul address, char *s)
 {
 	if (address == 0)
 	{

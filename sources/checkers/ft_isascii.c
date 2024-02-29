@@ -6,15 +6,15 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:18:49 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/02/02 11:04:22 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/01/30 03:19:20 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-
-	this function chacks if the given character is a valid 7-bits.
-
-	- 7-bits chars are the characters which have 7 bits in their
+ 	
+ 	this function chacks if the given character is a valid 7-bits.
+	
+	- 7-bits chars are the characters which have 7 bits in their 
 	binary representation when they got converted from "ascii" to "binary"
 
 	0   -> 0
@@ -24,7 +24,7 @@
 
 #include "../../includes/superlib.h"
 
-int32_t	ft_isascii(int32_t c)
+int	ft_isascii(int c)
 {
 	return (c <= 127 && c >= 0);
 }

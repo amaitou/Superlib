@@ -6,13 +6,13 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 14:41:37 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/02/02 11:10:31 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/01/30 03:20:57 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-void	*ft_memset(void *b, int32_t c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	t_uc	*p;
 	size_t	i;

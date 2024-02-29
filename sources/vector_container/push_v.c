@@ -6,14 +6,13 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 18:22:35 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/02/02 11:11:29 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/01/07 18:33:18 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-static int32_t	__copy_v(t_vector *old_vector, t_vector *new_vector,
-		size_t size)
+static int	__copy_v(t_vector *old_vector, t_vector *new_vector, size_t size)
 {
 	size_t	i;
 
@@ -30,7 +29,7 @@ static int32_t	__copy_v(t_vector *old_vector, t_vector *new_vector,
 	return (0);
 }
 
-int32_t	__push_v(t_vector **vector, void *value, size_t size)
+int	__push_v(t_vector **vector, void *value, size_t size)
 {
 	t_vector	*__v;
 

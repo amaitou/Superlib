@@ -11,10 +11,10 @@
 /* ************************************************************************** */
 
 /*
-
-   ft_strlcpy copies "n - 1" bytes from the src to the destination and returns
+ 	
+   ft_strlcpy copies "n - 1" bytes from the src to the destination and returns 
    the size of the src
-
+	
    the only thing I: have done here is checking if dstsize if 0 to avoid coping
    if is it not then ft_strlcpy will copy until "n - 1" since "n" is the '\0'
 

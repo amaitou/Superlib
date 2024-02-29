@@ -6,7 +6,7 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 08:59:03 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/02/02 10:38:44 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/01/30 03:20:38 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
 
 #include "../../includes/superlib.h"
 
-int32_t	ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	int32_t	i;
+	int	i;
 
 	i = 0;
 	while (lst != (void *)0)

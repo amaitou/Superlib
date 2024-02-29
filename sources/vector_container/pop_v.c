@@ -6,13 +6,13 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 18:23:52 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/02/02 11:11:39 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/01/07 18:33:15 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-int32_t	__pop_v(t_vector *vector)
+int	__pop_v(t_vector *vector)
 {
 	size_t	__last;
 

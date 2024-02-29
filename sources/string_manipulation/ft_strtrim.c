@@ -12,7 +12,7 @@
 
 #include "../../includes/superlib.h"
 
-static int32_t	isin(char c, char const *s)
+static int	isin(char c, char const *s)
 {
 	char	*p;
 
@@ -28,8 +28,8 @@ static int32_t	isin(char c, char const *s)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int32_t	begin;
-	int32_t	last;
+	int		begin;
+	int		last;
 	char	*p;
 
 	if (!s1)

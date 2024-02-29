@@ -6,15 +6,15 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 17:10:28 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/02/02 10:34:58 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/01/30 03:21:40 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-static int32_t	helper(int32_t nb)
+static int	helper(int nb)
 {
-	int32_t	i;
+	int	i;
 
 	i = 0;
 	if (nb <= 0)
@@ -27,7 +27,7 @@ static int32_t	helper(int32_t nb)
 	return (i);
 }
 
-int32_t	ft_putsigned(int32_t nb)
+int	ft_putsigned(int nb)
 {
 	if (nb >= 0 && nb <= 9)
 		ft_putchar(nb + 48);

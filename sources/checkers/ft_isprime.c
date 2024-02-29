@@ -6,15 +6,15 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 06:14:19 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/02/02 10:49:18 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/01/30 06:15:13 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-size_t	ft_isprime(int32_t nb)
+size_t	ft_isprime(int nb)
 {
-	int32_t	i;
+	int	i;
 
 	i = 2;
 	while (i <= (nb / 2))

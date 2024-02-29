@@ -6,13 +6,13 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 18:25:17 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/02/02 10:42:47 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/01/07 18:32:56 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-int32_t	__empty_v(t_vector *vector)
+int	__empty_v(t_vector *vector)
 {
 	return (!vector->size);
 }

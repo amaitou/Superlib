@@ -6,13 +6,13 @@
 /*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:32:20 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/02/02 11:05:05 by amait-ou         ###   ########.fr       */
+/*   Updated: 2024/01/30 03:21:18 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/superlib.h"
 
-void	ft_putchar_fd(char c, int32_t fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
