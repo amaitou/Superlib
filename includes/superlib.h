@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   superlib.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amait-ou <amait-ou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: amait-ou <amait-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:12:45 by amait-ou          #+#    #+#             */
-/*   Updated: 2024/02/01 07:39:50 by amait-ou         ###   ########.fr       */
+/*   Updated: 2025/01/25 11:17:34 by amait-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ typedef struct s_dlist
 	struct s_dlist	*prev;
 }	t_dlist;
 
-/* __Cvector_ Structure */
+/* Cvector_ Structure */
 typedef struct s_vector
 {
 	size_t	size;
@@ -143,20 +143,20 @@ int			ft_putsigned(int nb);
 int			ft_putunsigned(t_ui nb);
 
 /* __Cvector */
-void		**__begin_v(t_vector *vector);
-void		**__end_v(t_vector *vector);
-t_vector	*__create_v(void);
-t_vector	*__allocate_v(size_t size_t);
-void		*__get_v(t_vector *vector, size_t index);
-void		*__front_v(t_vector *vector);
-void		*__back_v(t_vector *vector);
-void		__free_v(t_vector *vector);
-int			__empty_v(t_vector *vector);
-int			__push_v(t_vector **vector, void *value, size_t size);
-int			__pop_v(t_vector *vector);
-int			__clear_v(t_vector *vector);
-size_t		__size_v(t_vector *vector);
-size_t		__capacity_v(t_vector *vector);
+void		**begin_v(t_vector *vector);
+void		**end_v(t_vector *vector);
+t_vector	*create_v(void);
+t_vector	*allocate_v(size_t size_t);
+void		*get_v(t_vector *vector, size_t index);
+void		*front_v(t_vector *vector);
+void		*back_v(t_vector *vector);
+void		free_v(t_vector *vector);
+int			empty_v(t_vector *vector);
+int			push_v(t_vector **vector, void *value, size_t size);
+int			pop_v(t_vector *vector);
+int			clear_v(t_vector *vector);
+size_t		size_v(t_vector *vector);
+size_t		capacity_v(t_vector *vector);
 
 /* Math Functions */
 size_t		ft_pow(int nb, int power);
